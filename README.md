@@ -1,4 +1,4 @@
-# TikTok Date Extractor TikTok Date Extractor - UTC-5 (Hora Peruana)
+# TikTok Date Extractor en Zona Horaria UTC-5 (Hora Peruana)
 Repositorio open source para extraer la fecha de origen de una publicación de TikTok.
 Herramienta #OSINT que facilita la fecha de creación de marca de tiempo de las URL de video de Tiktok. Funciona también con videos que han sido eliminados. 
 
