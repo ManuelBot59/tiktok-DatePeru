@@ -35,10 +35,15 @@
 
       function unixTimestampToHumanDate(timestamp) {
         var milliseconds = timestamp * 1000;
-        milliseconds = milliseconds - (3600000 * 5);
+        var milliseconds2 = timestamp * 1000;
+        milliseconds2 = milliseconds2 - (3600000 * 5);
+
         const dateObject = new Date(milliseconds);
-        const humanDateFormat = dateObject.toUTCString()+" (UTC-5)";
+        const dateObject2 = new Date2(milliseconds2);
+        const humanDateFormat = dateObject.toUTCString()+" (UTC-0 Coordinated Universal Time)";
+        const humanDateFormat2 = dateObject2.toUTCString()+" (UTC-5 Zona horaria en Perú)";
         return humanDateFormat;
+        return humanDateFormat2;
       }
 
       function getDate() {
@@ -57,6 +62,7 @@
     <div class="output">
       <span id="label">Video subido el: </span>
       <span id="date"></span>
+      <span id="date2"></span>
     </div>
   </body>
 </html>
