@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Tiktok Extractor Perú</title>
+    <title>TikTok Date Extractor - UTC-5 (Hora Peruana)</title>
     <style>
       body {
         margin: 1em;
@@ -34,11 +34,10 @@
       }
 
       function unixTimestampToHumanDate(timestamp) {
-        const milliseconds = timestamp * 1000
-        const milliseconds2 = timestamp * 1001
+        var milliseconds = timestamp * 1000;
+        milliseconds = milliseconds - (3600000 * 5);
         const dateObject = new Date(milliseconds);
-        const dateObject2 = new Date2(milliseconds2);
-        const humanDateFormat = dateObject.toUTC5String()+" (UTC-5)";
+        const humanDateFormat = dateObject.toUTCString()+" (UTC-5)";
         return humanDateFormat;
       }
 
@@ -49,16 +48,15 @@
         document.querySelector("#date").textContent = humanDateFormat;
       }
     </script>
-    <h1> Extractor de Fecha de Origen de Publicación UTC-5</h1>
+    <h2> Extractor de Fecha (Origen) de videos TikTok (Formato UTC-5 - Hora Peruana 🇵🇪)</h2>
     <div class="form">
-      <label for="url">Tiktok video URL:</label>
+      <label for="url">TikTok video URL:</label>
       <input type="text" id="url" name="url" />
-      <button onclick="getDate()">Get uploaded date</button>
+      <button onclick="getDate()">Obtener fecha:</button>
     </div>
     <div class="output">
-      <span id="label">Uploaded on: </span>
+      <span id="label">Video subido el: </span>
       <span id="date"></span>
-      <span id="date2"></span>
     </div>
   </body>
 </html>
