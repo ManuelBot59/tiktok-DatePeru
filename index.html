@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Tiktok Extractor Perú</title>
+    <style>
+      body {
+        margin: 1em;
+        font-family: "Helvetica", Arial, sans-serif;
+        font-size: 18px;
+      }
+      button, input {
+          font-size: 16px;
+      }
+      .form {
+          margin-bottom: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function getVidId() {
+        const tiktokUrl= document.querySelector("#url").value;
+        // This regex should be safe as "Only letters, numbers, underscores, or periods are allowed" in TikTok usernames.
+        const regex = /(?<=\/video\/)(.*?)(?=$|[^0-9])/;
+        const vidId = regex.exec(tiktokUrl)[0];
+        return vidId;
+      }
+
+      function extractUnixTimestamp(vidId) {
+        // BigInt needed as we need to treat vidId as 64 bit decimal. This reduces browser support.
+        const asBinary = BigInt(vidId).toString(2);
+        const first31Chars = asBinary.slice(0, 31);
+        const timestamp = parseInt(first31Chars, 2);
+        return timestamp;
+      }
+
+      function unixTimestampToHumanDate(timestamp) {
+        const milliseconds = timestamp * 1000;
+        const dateObject = new Date(milliseconds);
+        const humanDateFormat = dateObject.toUTCString()+" (UTC-5)";
+        return humanDateFormat;
+      }
+
+      function getDate() {
+        const vidId = getVidId();
+        const unixTimestamp = extractUnixTimestamp(vidId);
+        const humanDateFormat = unixTimestampToHumanDate(unixTimestamp);
+        document.querySelector("#date").textContent = humanDateFormat;
+      }
+    </script>
+
+    <div class="form">
+      <label for="url">Tiktok video URL:</label>
+      <input type="text" id="url" name="url" />
+      <button onclick="getDate()">Get uploaded date</button>
+    </div>
+    <div class="output">
+      <span id="label">Uploaded on: </span>
+      <span id="date"></span>
+    </div>
+  </body>
+</html>
