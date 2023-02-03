@@ -35,15 +35,11 @@
 
       function unixTimestampToHumanDate(timestamp) {
         var milliseconds = timestamp * 1000;
-        var milliseconds2 = timestamp * 1000;
-        milliseconds2 = milliseconds2 - (3600000 * 5);
+        milliseconds = milliseconds - (3600000 * 5);
 
         const dateObject = new Date(milliseconds);
-        const dateObject2 = new Date2(milliseconds2);
-        const humanDateFormat = dateObject.toUTCString()+" (UTC-0 Coordinated Universal Time)";
-        const humanDateFormat2 = dateObject2.toUTCString()+" (UTC-5 Zona horaria en Perú)";
+        const humanDateFormat = dateObject.toUTCString()+" (UTC-5 Zona horaria en Perú)";
         return humanDateFormat;
-        return humanDateFormat2;
       }
 
       function getDate() {
@@ -53,7 +49,7 @@
         document.querySelector("#date").textContent = humanDateFormat;
       }
     </script>
-    <h2> Extractor de Fecha de Origen de videos TikTok (Zona Horaria UTC-5 - Perú)</h2>
+    <h2> Extractor de Fecha de Origen de videos TikTok (Perú)</h2>
     <div class="form">
       <label for="url">TikTok video URL:</label>
       <input type="text" id="url" name="url" />
