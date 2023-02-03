@@ -34,9 +34,11 @@
       }
 
       function unixTimestampToHumanDate(timestamp) {
-        const milliseconds = timestamp / 1000
+        const milliseconds = timestamp * 1000
+        const milliseconds2 = timestamp * 1001
         const dateObject = new Date(milliseconds);
-        const humanDateFormat = dateObject.toUTCString()+" (UTC-5)";
+        const dateObject2 = new Date2(milliseconds2);
+        const humanDateFormat = dateObject.toUTC5String()+" (UTC-5)";
         return humanDateFormat;
       }
 
@@ -56,6 +58,7 @@
     <div class="output">
       <span id="label">Uploaded on: </span>
       <span id="date"></span>
+      <span id="date2"></span>
     </div>
   </body>
 </html>
