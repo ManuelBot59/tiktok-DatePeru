@@ -1,5 +1,7 @@
 # TikTok Date Extractor en UTC-5 (Zona Horaria de Perú)
 
+https://manuelbot59.github.io/tiktok-DatePeru/
+
 Herramienta #OSINT que facilita la fecha de creación de marca de tiempo de las URL de video de Tiktok. Funciona también con videos que han sido eliminados. 
 
 - Utilice un navegador web instalado desde su computadora para obtener el resultado.
