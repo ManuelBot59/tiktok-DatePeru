@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>TikTok Date Extractor - UTC-5 (Zona Horaria Perú)</title>
+    <title>TikTok Date Extractor GMT-5 (Zona Horaria Perú)</title>
     <link rel="icon" href="css/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="css/favicon.ico" type="image/x-icon" />	
     <style>
@@ -40,7 +40,7 @@
         milliseconds = milliseconds - (3600000 * 5);
 
         const dateObject = new Date(milliseconds);
-        const humanDateFormat = dateObject.toUTCString()+" (UTC-5 Zona horaria en Perú)";
+        const humanDateFormat = dateObject.toUTCString()+" (GMT-5 Zona horaria en Perú)";
         return humanDateFormat;
       }
 
@@ -51,25 +51,35 @@
         document.querySelector("#date").textContent = humanDateFormat;
       }
     </script>
-	<img src="images/portada.jpg" width="685" height="220"/><br>    
+	<img src="images/Timestamp-Peru.png" width="685" height="285"/><br>    
 	  
-    <h2> Extractor de Fecha de Origen de videos TikTok (Perú) </h2>
+  <h2> Fecha de creación de videos de Tik Tok</h2>
+  <h2>     (Zona Horaria de Perú GMT-5) </h2>
+
+  <br>
+  >> Funciona también con videos que hayan sido eliminados. 
+  <br>
+  >> Utilice un navegador web para extraer la URL del video en Tik Tok.
+  <br>
+  >> Este recurso web NO funciona con URLS generadas desde las aplicaciones Tik Tok (Android/Iphone).
+  <br>
 	 <br>
     <div class="form">
-      <label for="url">TikTok video URL:</label>
+      <label for="url">Ingrese URL: </label>
       <input type="text" id="url" name="url" />
       <button onclick="getDate()">Obtener fecha</button>
     </div>
     <div class="output">
-      <span id="label">Video subido el: </span>
+      <span id="label">Publicado el: </span>
       <span id="date"></span>
     </div>
-    <br><h4> Créditos: </h4>
-    <a href="https://github.com/bellingcat" target="_blank">Bellingcat</a> <br>
-      <a href="https://github.com/karisti" target="_blank">Kepa Aristi</a>
+    <br> <br>
+    *** NOTA:
+    Este repositorio ha sido modificado del script original: <a href="https://github.com/bellingcat/tiktok-timestamp" target="_blank">TikTok Timestamp (UTC-0)</a>
 	  
-	<br><h4> Sígueme: </h4>
-    <a href="https://twitter.com/ManuelBot59" target="_blank">Twitter</a> <br>
+	<br><h4> Sígueme como ManuelBot59 en: </h4>
+    <a href="https://twitter.com/ManuelBot59" target="_blank">X(Twitter)</a> <br>
+    <a href="https://t.me/OsintManuelBot59" target="_blank">Canal en Telegram</a> <br>
 	  
   </body>
 </html>
