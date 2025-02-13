@@ -1,19 +1,16 @@
-# TikTok Date Extractor en UTC-5 (Zona Horaria de Perú)
+# Get the date of creation of TikTok videos
 
-https://manuelbot59.github.io/tiktok-DatePeru/
+<div align="center">
+  https://manuelbot59.github.io/Tiktok-Timestamps
+<br> <br>
+  <img src="/images/tiktok-timestamps.jpg" width="600" height="300"/>
+</div>
+<br>
+SOCMINT tool that facilitates the creation date of Tiktok videos. It also works with videos that have been deleted. 
 
-Herramienta #OSINT que facilita la fecha de creación de marca de tiempo de las URL de video de Tiktok. Funciona también con videos que han sido eliminados. 
+- Use a web browser installed from your computer to get the result.
+- Does not work with links generated from the TikTok App installed on Android or Iphone!
 
-- Utilice un navegador web instalado desde su computadora para obtener el resultado.
+NOTE:
 
-- No funciona con enlaces generados desde la Aplicación de TikTok instalado en Android o Iphone!
-
-NOTA:
-
-Este repositorio ha sido modificado del script original: <a href="https://github.com/bellingcat/tiktok-timestamp" target="_blank">tiktok-timestamp</a> <br>
-
-
-
-<h4> Créditos: </h4>
-<a href="https://github.com/bellingcat" target="_blank">Bellingcat</a> <br>
- <a href="https://github.com/karisti" target="_blank">Kepa Aristi</a>
+This repository has been modified from the original script: <a href="https://github.com/bellingcat/tiktok-timestamp" target="_blank">tiktok-timestamp</a> <br>
