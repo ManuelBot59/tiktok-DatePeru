@@ -3,7 +3,7 @@
 <div align="center">
   https://manuelbot59.github.io/Tiktok-Timestamps
 <br> <br>
-  <img src="/images/tiktok-timestamps.jpg" width="600" height="300"/>
+  <img src="https://manuelbot59.github.io/Tiktok-Timestamps/images/tiktok-timestamps.jpg" width="600" height="300"/>
 </div>
 <br>
 SOCMINT tool that facilitates the creation date of Tiktok videos. It also works with videos that have been deleted. 
