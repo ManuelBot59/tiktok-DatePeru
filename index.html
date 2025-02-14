@@ -1,61 +1,55 @@
 <html>
   <head>
-    <title>TikTok Date Extractor GMT-5 (Zona Horaria Perú)</title>
-    <link rel="icon" href="css/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="css/favicon.ico" type="image/x-icon" />	
-    <META HTTP-EQUIV="REFRESH" CONTENT="5;URL=https://manuelbot59.github.io/Tiktok-Timestamps/">
+    <title>Redireccionando...</title>
+    <link rel="icon" href="https://manuelbot59.github.io/Tiktok-Timestamps/images/tiktok.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://manuelbot59.github.io/Tiktok-Timestamps/images/tiktok.ico" type="image/x-icon" />
+    <meta http-equiv="refresh" content="5; url=https://manuelbot59.github.io/Tiktok-Timestamps/">
     <style>
       body {
-        margin: 1em;
-        font-family: "Helvetica", Arial, sans-serif;
-        font-size: 18px;
+          background: #1a1a1a;
+          color: #ffffff;
+          font-family: Arial, sans-serif;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          margin: 0;
+          text-align: center;
       }
-      button, input {
-          font-size: 16px;
+      
+      .loader {
+          width: 50px;
+          height: 50px;
+          border: 5px solid #f3f3f3;
+          border-top: 5px solid #3498db;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+          margin: 20px auto;
       }
-      .form {
-          margin-bottom: 1em;
+
+      @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
       }
-    </style>
+
+      .message {
+          font-size: 1.2em;
+          margin: 20px;
+          padding: 0 15px;
+      }
+
+      a {
+          color: #3498db;
+          text-decoration: none;
+      }
+  </style>
   </head>
   <body>
-    <script>
-      function getVidId() {
-        const tiktokUrl= document.querySelector("#url").value;
-        // This regex should be safe as "Only letters, numbers, underscores, or periods are allowed" in TikTok usernames.
-        const regex = /(?<=\/video\/)(.*?)(?=$|[^0-9])/;
-        const vidId = regex.exec(tiktokUrl)[0];
-        return vidId;
-      }
-
-      function extractUnixTimestamp(vidId) {
-        // BigInt needed as we need to treat vidId as 64 bit decimal. This reduces browser support.
-        const asBinary = BigInt(vidId).toString(2);
-        const first31Chars = asBinary.slice(0, 31);
-        const timestamp = parseInt(first31Chars, 2);
-        return timestamp;
-      }
-
-      function unixTimestampToHumanDate(timestamp) {
-        var milliseconds = timestamp * 1000;
-        milliseconds = milliseconds - (3600000 * 5);
-
-        const dateObject = new Date(milliseconds);
-        const humanDateFormat = dateObject.toUTCString()+" (GMT-5 Zona horaria en Perú)";
-        return humanDateFormat;
-      }
-
-      function getDate() {
-        const vidId = getVidId();
-        const unixTimestamp = extractUnixTimestamp(vidId);
-        const humanDateFormat = unixTimestampToHumanDate(unixTimestamp);
-        document.querySelector("#date").textContent = humanDateFormat;
-      }
-    </script>
-	<img src="images/Timestamp-Peru.png" width="685" height="285"/><br>    
-	  
-  <h2> EN APROX. 05 SEGUNDOS SERÁS REDIRIGIDO Al NUEVO RECURSO DE TIKTOK TIMESTAMPS.</h2>
-  <br>
-  <h2> ENGLISH: IN APPROX. 05 SECONDS YOU WILL BE REDIRECTED TO THE NEW TIKTOK TIMESTAMPS RESOURCE.</h2>
-</body>
+  <img src="https://manuelbot59.github.io/Tiktok-Timestamps/images/tiktok-timestamps.jpg" width="685" height="285"/><br>      
+  <div class="loader"></div>
+  <div class="message">
+      Estás siendo redirigido a <a href="https://manuelbot59.github.io/Tiktok-Timestamps/">Tiktok Timestamps Universal</a> en 5 segundos...
+  </div>
+  </body>
 </html>
