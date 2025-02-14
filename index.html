@@ -49,7 +49,22 @@
   <img src="https://manuelbot59.github.io/Tiktok-Timestamps/images/tiktok-timestamps.jpg" width="685" height="285"/><br>      
   <div class="loader"></div>
   <div class="message">
-      Estás siendo redirigido a <a href="https://manuelbot59.github.io/Tiktok-Timestamps/">Tiktok Timestamps Universal</a> en 5 segundos...
+      Estás siendo redirigido a <a href="https://manuelbot59.github.io/Tiktok-Timestamps/">Tiktok Timestamps Universal</a> en <span id="countdown">5</span> segundos...
   </div>
+    <script>
+        // Contador regresivo
+        let seconds = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+            
+            if(seconds <= 0) {
+                clearInterval(timer);
+                window.location.href = 'https://manuelbot59.github.io/Tiktok-Timestamps/';
+            }
+        }, 1000);
+    </script>
   </body>
 </html>
