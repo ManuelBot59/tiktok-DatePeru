@@ -1,7 +1,7 @@
-# Get the date of creation of TikTok videos
+# Recurso OSINT trasladado al nuevo sitio web
 
 <div align="center">
-  https://manuelbot59.github.io/Tiktok-Timestamps
+  [https://whatsmyname.streamlit.app/](https://whatsmyname.streamlit.app/)
 <br> <br>
   <img src="https://manuelbot59.github.io/Tiktok-Timestamps/images/tiktok-timestamps.jpg" width="600" height="300"/>
 </div>
